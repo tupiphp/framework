@@ -1,6 +1,6 @@
 <?php
 
-namespace Core\Routings;
+namespace Tupi\Routings;
 
 class RouterBuilder
 {

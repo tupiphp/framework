@@ -1,6 +1,6 @@
 <?php
 
-use Core;
+use Tupi;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +22,7 @@ require_once __DIR__.'/../src/Common.php';
 |
 */
 
-$app = new Core\Application(APP_PATH);
+$app = new Tupi\Application(APP_PATH);
 
 /*
 |--------------------------------------------------------------------------

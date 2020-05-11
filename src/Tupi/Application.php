@@ -1,6 +1,6 @@
 <?php
 
-namespace Core;
+namespace Tupi;
 
 class Application
 {

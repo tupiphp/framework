@@ -1,9 +1,9 @@
 <?php
 
-namespace Core\Routings;
-
+namespace Tupi;
 
 use BadMethodCallException;
+use Tupi\Routings\RouterBuilder;
 
 class Route
 {
