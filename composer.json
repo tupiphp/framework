@@ -1,0 +1,23 @@
+{
+    "name": "tupiphp/framework",
+    "description": "The Tupi Framework.",
+    "keywords": ["framework", "tupi"],
+    "type": "project",
+    "license": "MIT",
+    "homepage": "https://tupiphp.github.io",
+     "support": {
+        "issues": "https://github.com/tupiphp/framework/issues",
+        "source": "https://github.com/tupiphp/framework"
+    },
+    "authors": [
+        {
+            "name": "Robert San",
+            "email": "robertsanseries@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2.5"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+ }
