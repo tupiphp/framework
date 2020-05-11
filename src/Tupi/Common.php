@@ -73,3 +73,25 @@ if (! function_exists('debug'))
         exit;
     }
 }
+
+/*
+|--------------------------------------------------------------------------
+| Config Instances
+|--------------------------------------------------------------------------
+|
+| Getting config instances.
+|
+*/
+
+if (! function_exists('view'))
+{
+    /**
+     * @param string $name
+     * @return mixed
+     */
+    function view(string $name)
+    {
+        return View::make($name);
+    }
+}
+
