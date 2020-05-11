@@ -1,6 +1,6 @@
 ## About Tupi
 
-> **Note:** Este repositório contém o código principal do framework Tupi.
+> **Note:** This repository contains the main code of the Tupi framework.
 
 Tupi is a simple web application framework with expressive and elegant syntax. Tupi tries to facilitate the development of common tasks.
 
