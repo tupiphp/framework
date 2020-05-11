@@ -1,11 +1,12 @@
-## Sobre o Tupi
+## About Tupi
 
-> **Note:** Este repositório contém o código principal do framework Tupi.
+> **Note:** This repository contains the main code of the Tupi framework.
 
-Tupi é um framework de aplicativo da web simples e com sintaxe expressiva e elegante. O Tupi tenta facilitar o desenvolvimento de tarefas comuns.
+Tupi is a simple web application framework with expressive and elegant syntax. Tupi tries to facilitate the development of common tasks.
 
-O principal foco do framework Tupi é tornar ter o código simples para qualquer iniciante.
+The main focus of the Tupi framework is to make the code simple for any beginner.
 
 ## License
 
 The Tupi framework is open-sourced software licensed under the [MIT license](LICENSE.md).
+
