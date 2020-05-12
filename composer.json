@@ -19,6 +19,9 @@
         "php": "^7.2.5"
     },
      "autoload": {
+        "files": [
+           "src/bootstrap.php"
+        ],
         "psr-4": {
             "Tupi\\": "src/"
         }
