@@ -4,6 +4,7 @@ namespace Tupi;
 
 use BadMethodCallException;
 use Tupi\Routings\RouterBuilder;
+use Tupi\PHP\Lang\Comparable;
 
 class Route
 {
@@ -16,9 +17,11 @@ class Route
      * @param array|string|null $action
      * @return \Core\Routing\Route
      */
-    public static function get($uri, $action = null)
+    public static function get($uri, $action)
     {
-        return self::addRoute('GET', $uri, $action);
+        debug($action);
+
+        //return self::addRoute('GET', $uri, $action);
     }
 
     /**
@@ -67,8 +70,14 @@ class Route
       */
      private static function addRoute($httpProtocol, $uri, $action)
      {
-         $action = trim($action, '/');
-         $routes[$action] = $callback;
+         if(! is_null($uri) && $uri == "/") {
+             return;
+         }
+
+         if($action != null) {
+             $action = trim($action, "/");
+         }
+
         return self::createRoute($httpProtocol, $uri, $action);
      }
 
@@ -79,11 +88,25 @@ class Route
      */
     private static function createRoute($httpProtocol, $uri, $action)
     {
-        return (new RouterBuilder())
-            ->setHttpProtocol($httpProtocol)
-            ->setURI($uri)
-            ->setActions($action)
-            ->build();
+
+
+        if(self::isRouteValid($uri)) {
+            echo $uri;
+        } else {
+            echo "dd";
+        }
+    }
+
+    /**
+     * @param $uri
+     * @return bool
+     */
+    public static function isExistRoute($uri) {
+        if (! in_array(explode('/', $uri)[0], self::routes)) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
     /**

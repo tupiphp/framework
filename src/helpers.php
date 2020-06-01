@@ -1,6 +1,7 @@
 <?php
 
 use Tupi\View;
+use Tupi\Paths;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,7 +64,41 @@ if (! function_exists('view'))
      */
     function view($view = null, $data = [])
     {
-        View::make($view, $data);
+        // if (func_num_args() === 0) {
+        //     return;
+        // }
+
+        // $view = Paths::VIEW_DIR . $view . ".php";
+
+        // echo $view;die();
+
+        // if (file_exists($view)) {
+            return [
+                'uri'   => $view,
+                'data'  => $data
+            ];
+        // }
+
+        // return;
     }
 }
 
+/*
+|--------------------------------------------------------------------------
+| Debug console browser
+|--------------------------------------------------------------------------
+|
+| Debug console browser.
+|
+*/
+
+if (! function_exists('console_log'))
+{
+    function console_log($data)
+    {       
+        if (is_array($data))
+            $data = implode(',', $data);
+
+        echo "<script>console.log('TupiPHP Debug Objects: " . $data . "' );</script>";
+    }
+}

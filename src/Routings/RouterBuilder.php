@@ -26,4 +26,28 @@ class RouterBuilder
     public function build () {
         return new Router($this);
     }
+
+    public function equals($anotherObj) {
+        if ($anotherObj == null) {
+            return false;
+        }
+
+        if ($this != $anotherObj) {
+            return false;
+        }
+
+        if($this->httpProtocol !== $anotherObj->httpProtocol) {
+            return false;
+        }
+
+        if($this->uri !== $anotherObj->uri) {
+            return false;
+        }
+
+        if($this->action !== $anotherObj->action) {
+            return false;
+        }
+
+        return true;
+    }
 }
